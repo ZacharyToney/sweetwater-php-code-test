@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\TaskOne;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,8 +18,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/task1', function () {
-    return view('task1');
+Route::controller(TaskOne::class)->group(function (){
+    Route::get('/task1','index')->name('task1');
 });
 
 Route::get('/task2', function () {
