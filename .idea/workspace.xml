@@ -6,6 +6,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sweetwater-test/README.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/sweetwater-test/app/Http/Controllers/TaskOne.php" beforeDir="false" afterPath="$PROJECT_DIR$/sweetwater-test/app/Http/Controllers/TaskOne.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sweetwater-test/app/Http/Controllers/TaskTwo.php" beforeDir="false" afterPath="$PROJECT_DIR$/sweetwater-test/app/Http/Controllers/TaskTwo.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sweetwater-test/resources/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/sweetwater-test/resources/css/app.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sweetwater-test/resources/views/task1.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/sweetwater-test/resources/views/task1.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sweetwater-test/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/sweetwater-test/routes/web.php" afterDir="false" />
@@ -46,7 +47,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670974133919</updated>
-      <workItem from="1670974135417" duration="5742000" />
+      <workItem from="1670974135417" duration="6323000" />
     </task>
     <servers />
   </component>
