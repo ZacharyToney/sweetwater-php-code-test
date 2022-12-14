@@ -59,5 +59,161 @@
         </div>
     </div>
     {{--END Comments about candy table--}}
+
+    {{--BEGIN Comments about call me / don't call me table--}}
+    <div class="px-4 sm:px-6 lg:px-8">
+        <div class="sm:flex sm:items-center">
+            <div class="sm:flex-auto">
+                <h1 class="text-xl font-semibold text-gray-900 pt-8">Comments about Calls</h1>
+                <p class="mt-2 text-sm text-gray-700">A list of all the comments that have calls in them.</p>
+            </div>
+        </div>
+        <div class="mt-8 flex flex-col">
+            <div class="-my-2 -mx-4 overflow-x-auto sm:-mx-6 lg:-mx-8">
+                <div class="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
+                    <div class="overflow-hidden shadow ring-1 ring-black ring-opacity-5 md:rounded-lg">
+                        <table class="min-w-full divide-y divide-gray-300">
+                            <thead class="bg-gray-50">
+                            <tr>
+                                <th scope="col" class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-6">Order Id</th>
+                                <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Comments</th>
+                                <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Ship Date Expected</th>
+                            </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-200 bg-white">
+
+                            @foreach($commentsAboutCalls as $commentAboutCalls)
+                                <tr>
+                                    <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6">{{$commentAboutCalls->orderid}}</td>
+                                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{{$commentAboutCalls->comments}}</td>
+                                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{{$commentAboutCalls->shipdate_expected}}</td>
+                                </tr>
+                            @endforeach
+                            <!-- More people... -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{--END Comments about call me / don't call me table--}}
+
+    {{--BEGIN Comments about who referred me table--}}
+    <div class="px-4 sm:px-6 lg:px-8">
+        <div class="sm:flex sm:items-center">
+            <div class="sm:flex-auto">
+                <h1 class="text-xl font-semibold text-gray-900 pt-8">Comments about who referred me</h1>
+                <p class="mt-2 text-sm text-gray-700">A list of all the comments about who referred me.</p>
+            </div>
+        </div>
+        <div class="mt-8 flex flex-col">
+            <div class="-my-2 -mx-4 overflow-x-auto sm:-mx-6 lg:-mx-8">
+                <div class="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
+                    <div class="overflow-hidden shadow ring-1 ring-black ring-opacity-5 md:rounded-lg">
+                        <table class="min-w-full divide-y divide-gray-300">
+                            <thead class="bg-gray-50">
+                            <tr>
+                                <th scope="col" class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-6">Order Id</th>
+                                <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Comments</th>
+                                <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Ship Date Expected</th>
+                            </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-200 bg-white">
+
+                            @foreach($commentsAboutReferredMe as $commentAboutReferredMe)
+                                <tr>
+                                    <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6">{{$commentAboutReferredMe->orderid}}</td>
+                                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{{$commentAboutReferredMe->comments}}</td>
+                                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{{$commentAboutReferredMe->shipdate_expected}}</td>
+                                </tr>
+                            @endforeach
+                            <!-- More people... -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{--END Comments about who referred me table--}}
+
+    {{--BEGIN Comments about signature requirements upon delivery table--}}
+    <div class="px-4 sm:px-6 lg:px-8">
+        <div class="sm:flex sm:items-center">
+            <div class="sm:flex-auto">
+                <h1 class="text-xl font-semibold text-gray-900 pt-8">Comments about signature requirements upon delivery</h1>
+                <p class="mt-2 text-sm text-gray-700">A list of all the comments that were about signature requirements upon delivery.</p>
+            </div>
+        </div>
+        <div class="mt-8 flex flex-col">
+            <div class="-my-2 -mx-4 overflow-x-auto sm:-mx-6 lg:-mx-8">
+                <div class="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
+                    <div class="overflow-hidden shadow ring-1 ring-black ring-opacity-5 md:rounded-lg">
+                        <table class="min-w-full divide-y divide-gray-300">
+                            <thead class="bg-gray-50">
+                            <tr>
+                                <th scope="col" class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-6">Order Id</th>
+                                <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Comments</th>
+                                <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Ship Date Expected</th>
+                            </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-200 bg-white">
+
+                            @foreach($commentsAboutSignatureRequirementsUponDelivery as $commentAboutSignatureRequirementsUponDelivery)
+                                <tr>
+                                    <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6">{{$commentAboutSignatureRequirementsUponDelivery->orderid}}</td>
+                                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{{$commentAboutSignatureRequirementsUponDelivery->comments}}</td>
+                                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{{$commentAboutSignatureRequirementsUponDelivery->shipdate_expected}}</td>
+                                </tr>
+                            @endforeach
+                            <!-- More people... -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{--END Comments about signature requirements upon delivery table--}}
+
+    {{--BEGIN Miscellaneous comments (everything else) table--}}
+    <div class="px-4 sm:px-6 lg:px-8">
+        <div class="sm:flex sm:items-center">
+            <div class="sm:flex-auto">
+                <h1 class="text-xl font-semibold text-gray-900 pt-8">Comments about miscellaneous comments</h1>
+                <p class="mt-2 text-sm text-gray-700">A list of all miscellaneous comments.</p>
+            </div>
+        </div>
+        <div class="mt-8 flex flex-col">
+            <div class="-my-2 -mx-4 overflow-x-auto sm:-mx-6 lg:-mx-8">
+                <div class="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
+                    <div class="overflow-hidden shadow ring-1 ring-black ring-opacity-5 md:rounded-lg">
+                        <table class="min-w-full divide-y divide-gray-300">
+                            <thead class="bg-gray-50">
+                            <tr>
+                                <th scope="col" class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-6">Order Id</th>
+                                <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Comments</th>
+                                <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Ship Date Expected</th>
+                            </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-200 bg-white">
+
+                            @foreach($commentsAboutMiscellaneousComments as $commentAboutMiscellaneousComments)
+                                <tr>
+                                    <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6">{{$commentAboutMiscellaneousComments->orderid}}</td>
+                                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{{$commentAboutMiscellaneousComments->comments}}</td>
+                                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{{$commentAboutMiscellaneousComments->shipdate_expected}}</td>
+                                </tr>
+                            @endforeach
+                            <!-- More people... -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{--END Miscellaneous comments (everything else) table--}}
 </body>
 </html>
