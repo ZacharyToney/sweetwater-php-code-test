@@ -21,5 +21,5 @@ Route::controller(TaskOne::class)->group(function (){
 });
 
 Route::controller(TaskTwo::class)->group(function (){
-    //Route::get('/task2','index')->name('task2');
+    Route::get('/task2','index')->name('task2');
 });
