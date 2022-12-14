@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    @vite('resources/css/app.css')
     <title>Laravel</title>
 
     <!-- Fonts -->
@@ -21,8 +21,43 @@
     </style>
 </head>
 <body class="antialiased">
-    <h1>
-        Task 1
-    </h1>
+    {{--BEGIN Comments about candy table--}}
+    <div class="px-4 sm:px-6 lg:px-8">
+        <div class="sm:flex sm:items-center">
+            <div class="sm:flex-auto">
+                <h1 class="text-xl font-semibold text-gray-900 pt-8">Comments about Candy</h1>
+                <p class="mt-2 text-sm text-gray-700">A list of all the comments that have candy in them.</p>
+            </div>
+        </div>
+        <div class="mt-8 flex flex-col">
+            <div class="-my-2 -mx-4 overflow-x-auto sm:-mx-6 lg:-mx-8">
+                <div class="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
+                    <div class="overflow-hidden shadow ring-1 ring-black ring-opacity-5 md:rounded-lg">
+                        <table class="min-w-full divide-y divide-gray-300">
+                            <thead class="bg-gray-50">
+                            <tr>
+                                <th scope="col" class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-6">Order Id</th>
+                                <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Comments</th>
+                                <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Ship Date Expected</th>
+                            </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-200 bg-white">
+
+                            @foreach($commentsAboutCandy as $commentAboutCandy)
+                            <tr>
+                                <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6">{{$commentAboutCandy->orderid}}</td>
+                                <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{{$commentAboutCandy->comments}}</td>
+                                <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{{$commentAboutCandy->shipdate_expected}}</td>
+                            </tr>
+                            @endforeach
+                            <!-- More people... -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{--END Comments about candy table--}}
 </body>
 </html>
