@@ -13,8 +13,12 @@ class TaskTwo extends Controller
             $loweredComments = strtolower($record->comments);
             if(str_contains($loweredComments,'expected ship date')){
                 $commentSplit = explode('expected ship date',$loweredComments);
-                foreach ($commentSplit as $split){
-                    if(date_parse($split)){
+                if(isset($commentSplit[1])){
+                    if (str_contains($commentSplit[1],':')){
+                        $commentSplit[1] = ltrim($commentSplit[1],':');
+                    }
+                    $commentSplit[1] = trim($commentSplit[1]);
+                    if(date_parse($commentSplit[1])){
                         //get date from string
                         $dateFromString = date_parse($record->comments);
                         $year = $dateFromString['year'] ?: '';
@@ -33,6 +37,7 @@ class TaskTwo extends Controller
                             DB::update("update sweetwater_test set shipdate_expected = '$year-$month-$day' where orderid = ?",[$record->orderid]);
                         }
                         catch (\Exception $e){
+                            //dd($year,$month,$day,$record->comments,$commentSplit,$commentSplit[1],$dateFromString,$record->orderid);
                             continue;
                         }
                     }
