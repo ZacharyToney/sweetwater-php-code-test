@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\TaskOne;
+use App\Http\Controllers\TaskTwo;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,6 +23,6 @@ Route::controller(TaskOne::class)->group(function (){
     Route::get('/task1','index')->name('task1');
 });
 
-Route::get('/task2', function () {
-    return view('task2');
+Route::controller(TaskTwo::class)->group(function (){
+    Route::get('/task2','index')->name('task2');
 });
