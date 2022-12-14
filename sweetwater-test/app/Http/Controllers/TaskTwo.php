@@ -20,7 +20,7 @@ class TaskTwo extends Controller
                     $commentSplit[1] = trim($commentSplit[1]);
                     if(date_parse($commentSplit[1])){
                         //get date from string
-                        $dateFromString = date_parse($record->comments);
+                        $dateFromString = date_parse($commentSplit[1]);
                         $year = $dateFromString['year'] ?: '';
                         if(empty($year)){
                             continue;
