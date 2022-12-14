@@ -15,14 +15,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Route::controller(TaskOne::class)->group(function (){
+    Route::get('/','index')->name('task1');
     Route::get('/task1','index')->name('task1');
 });
 
 Route::controller(TaskTwo::class)->group(function (){
-    Route::get('/task2','index')->name('task2');
+    //Route::get('/task2','index')->name('task2');
 });

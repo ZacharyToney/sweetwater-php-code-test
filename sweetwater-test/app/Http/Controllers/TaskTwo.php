@@ -7,8 +7,8 @@ class TaskTwo extends Controller
 {
     public function index()
     {
-        $sweetwater_test = DB::table('sweetwater_test')->get();
-        foreach ($sweetwater_test as $record){
+        $sweetwaterTest = DB::table('sweetwater_test')->get();
+        foreach ($sweetwaterTest as $record){
             //if date is in comments
             $loweredComments = strtolower($record->comments);
             if(str_contains($loweredComments,'expected ship date')){

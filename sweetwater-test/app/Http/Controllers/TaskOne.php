@@ -14,8 +14,8 @@ class TaskOne extends Controller
         $commentsAboutSignatureRequirementsUponDelivery = [];
         $commentsAboutMiscellaneousComments = [];
 
-        $sweetwater_test = DB::table('sweetwater_test')->get();
-        foreach ($sweetwater_test as $record){
+        $sweetwaterTest = DB::table('sweetwater_test')->get();
+        foreach ($sweetwaterTest as $record){
             //Comments about candy
             $loweredComment = strtolower($record->comments);
             if(str_contains($loweredComment,'candy')){
